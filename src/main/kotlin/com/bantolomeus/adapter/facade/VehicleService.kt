@@ -3,10 +3,17 @@ package com.bantolomeus.adapter.facade
 class VehicleService(private val tire: Tire, private val frame: Frame, private val window: Window) {
 
     fun buildVehicle(vehicle: String):String {
-        if (vehicle == "motorbike") {
-            return frame.orderFrame("1") + " " + tire.orderTire("4")
+        val stringBuilder = StringBuilder()
+
+        return if (vehicle == "motorbike") {
+            stringBuilder.append(frame.orderFrame("1"))
+            stringBuilder.append(tire.orderTire("2"))
+            stringBuilder.toString()
         } else {
-            return frame.orderFrame("1") + " " + tire.orderTire("2")  + " " + window.orderWindow("6")
+            stringBuilder.append(frame.orderFrame("1"))
+            stringBuilder.append(tire.orderTire("4"))
+            stringBuilder.append(window.orderWindow("6"))
+            stringBuilder.toString()
         }
     }
 

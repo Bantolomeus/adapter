@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
-class ProjectionController() {
+class GeologistController() {
 
     @RequestMapping(path = arrayOf("/geologist"), method = arrayOf(RequestMethod.GET),
             produces = arrayOf(MediaType.APPLICATION_JSON_UTF8_VALUE))
