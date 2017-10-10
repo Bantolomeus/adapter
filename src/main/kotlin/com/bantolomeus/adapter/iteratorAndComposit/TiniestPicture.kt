@@ -1,8 +1,8 @@
 package com.bantolomeus.adapter.iteratorAndComposit
 
-class TiniestPicture : Picture {
+class TiniestPicture(private val text: String) : Picture {
 
     override fun print() {
-        println("tiniest picture")
+        println("tiniest picture $text")
     }
 }

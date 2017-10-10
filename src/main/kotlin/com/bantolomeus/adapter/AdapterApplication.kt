@@ -11,11 +11,11 @@ class AdapterApplication
 fun main(args: Array<String>) {
     SpringApplication.run(AdapterApplication::class.java, *args)
 
-    val tiniestPicture1 = TiniestPicture()
-    val tiniestPicture2 = TiniestPicture()
-    val tiniestPicture3 = TiniestPicture()
-    val tiniestPicture4 = TiniestPicture()
-    val tiniestPicture5 = TiniestPicture()
+    val tiniestPicture1 = TiniestPicture("1")
+    val tiniestPicture2 = TiniestPicture("2")
+    val tiniestPicture3 = TiniestPicture("3")
+    val tiniestPicture4 = TiniestPicture("4")
+    val tiniestPicture5 = TiniestPicture("5")
 
     val picture = CompositePicture()
     val pictureA = CompositePicture()
@@ -28,8 +28,8 @@ fun main(args: Array<String>) {
     pictureB.add(tiniestPicture2)
     pictureB.add(tiniestPicture4)
 
-    picture.add(pictureA)
     picture.add(pictureB)
+    picture.add(pictureA)
 
     picture.print()
 }
