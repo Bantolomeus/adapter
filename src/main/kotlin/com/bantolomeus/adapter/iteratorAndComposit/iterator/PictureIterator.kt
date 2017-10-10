@@ -1,21 +1,20 @@
 package com.bantolomeus.adapter.iteratorAndComposit.iterator
 
-import com.bantolomeus.adapter.iteratorAndComposit.Picture
-import com.bantolomeus.adapter.iteratorAndComposit.TiniestPicture
+import com.bantolomeus.adapter.iteratorAndComposit.iterator.Picture
 
-class PictureIterator(list: MutableList<Picture>) {
-    private val tiniestPictures = mutableListOf<Picture>()
+class PictureIterator(list: MutableList<TinyPicture>): Iterator {
+    private val pictures = mutableListOf<TinyPicture>()
     private var position = 0
 
     init {
-        tiniestPictures.addAll(list)
+        pictures.addAll(list)
     }
 
-    fun next(): Picture {
-        return tiniestPictures[position].also { position++ }
+    override fun next(): TinyPicture {
+        return pictures[position].also { position++ }
     }
 
-    fun hasNext(): Boolean {
-        return position <= tiniestPictures.size
+    override fun hasNext(): Boolean {
+        return position < pictures.size
     }
 }

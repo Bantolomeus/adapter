@@ -1,4 +1,4 @@
-package com.bantolomeus.adapter.iteratorAndComposit
+package com.bantolomeus.adapter.iteratorAndComposit.composit
 
 class TiniestPicture(private val text: String) : Picture {
 

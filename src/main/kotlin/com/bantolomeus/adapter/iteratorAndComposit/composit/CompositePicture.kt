@@ -1,16 +1,8 @@
-package com.bantolomeus.adapter.iteratorAndComposit
-
-import com.bantolomeus.adapter.iteratorAndComposit.iterator.PictureIterator
+package com.bantolomeus.adapter.iteratorAndComposit.composit
 
 class CompositePicture : Picture {
 
     private val pictureParts = mutableListOf<Picture>()
-    private val tiniestPictures = mutableListOf<Picture>()
-
-    fun createPictureIterator(): PictureIterator {
-        return PictureIterator(tiniestPictures)
-    }
-
 
     override fun print() {
         for (picture in pictureParts) {

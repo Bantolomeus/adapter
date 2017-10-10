@@ -1,7 +1,7 @@
 package com.bantolomeus.adapter
 
-import com.bantolomeus.adapter.iteratorAndComposit.CompositePicture
-import com.bantolomeus.adapter.iteratorAndComposit.TiniestPicture
+import com.bantolomeus.adapter.iteratorAndComposit.composit.CompositePicture
+import com.bantolomeus.adapter.iteratorAndComposit.composit.TiniestPicture
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
