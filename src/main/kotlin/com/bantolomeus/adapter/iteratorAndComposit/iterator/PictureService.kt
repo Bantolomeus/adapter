@@ -4,13 +4,13 @@ class PictureService(private val picture: Picture) {
 
     fun printPicture() {
         val pictureIterator = picture.createIterator()
-
+        printPictureHelp(pictureIterator)
     }
 
     private fun printPictureHelp(iterator: Iterator) {
         while (iterator.hasNext()) {
-            val currentPicture = iterator.next()
-//            println(currentPicture.)
+            val currentPicture : TinyPicture = iterator.next() as TinyPicture
+            currentPicture.print()
         }
     }
 

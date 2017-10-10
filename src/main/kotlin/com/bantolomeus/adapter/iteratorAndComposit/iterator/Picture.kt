@@ -1,7 +1,5 @@
 package com.bantolomeus.adapter.iteratorAndComposit.iterator
 
-import com.bantolomeus.adapter.iteratorAndComposit.iterator.Picture
-
 class Picture {
     private val pictures = mutableListOf<TinyPicture>()
 
