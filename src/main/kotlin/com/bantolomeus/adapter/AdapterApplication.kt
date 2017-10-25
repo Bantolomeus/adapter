@@ -5,6 +5,7 @@ import com.bantolomeus.adapter.iteratorAndComposit.composit.TiniestPicture
 import com.bantolomeus.adapter.iteratorAndComposit.iterator.Picture
 import com.bantolomeus.adapter.iteratorAndComposit.iterator.PictureService
 import com.bantolomeus.adapter.iteratorAndComposit.iterator.TinyPicture
+import com.bantolomeus.adapter.state.Context
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
@@ -59,4 +60,8 @@ fun main(args: Array<String>) {
     picture.add(pictureA)
 
     picture.print()
+
+
+    val context = Context()
+    context.handleAction()
 }

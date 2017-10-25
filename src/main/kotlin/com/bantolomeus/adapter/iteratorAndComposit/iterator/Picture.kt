@@ -8,6 +8,6 @@ class Picture {
     }
 
     fun createIterator(): Iterator {
-        return PictureIterator(pictures)
+        return TinyPictureIterator(pictures)
     }
 }

@@ -1,4 +1,4 @@
-package com.bantolomeus.adapter.Controller
+package com.bantolomeus.adapter.controller
 
 import com.bantolomeus.adapter.template.MetalHouse
 import com.bantolomeus.adapter.template.WoodHouse
