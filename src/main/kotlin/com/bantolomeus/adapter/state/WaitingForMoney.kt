@@ -2,7 +2,7 @@ package com.bantolomeus.adapter.state
 
 class WaitingForMoney(private val context: Context): StateInterface {
     override fun handleAction() {
-        inputIncoming()
+        insertMoney()
     }
 
     override fun inputIncoming() {
@@ -10,7 +10,7 @@ class WaitingForMoney(private val context: Context): StateInterface {
     }
 
     override fun insertMoney() {
-        println("please insert 1 Euro")
+        println("please wait for beverage")
         context.state = WaitingForOutput(context)
     }
 

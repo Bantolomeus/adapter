@@ -14,7 +14,7 @@ class WaitingForOutput(private val context: Context): StateInterface {
     }
 
     override fun handOutItem() {
-        println("beverage is soon ready, please wait a moment")
+        println("here is your beverage")
     }
 
 }

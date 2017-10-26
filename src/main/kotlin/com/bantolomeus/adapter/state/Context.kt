@@ -1,7 +1,7 @@
 package com.bantolomeus.adapter.state
 
 class Context {
-    var state : StateInterface = WaitingForInput(Context())
+    var state : StateInterface = WaitingForInput(this)
 
     fun handleAction() {
         state.handleAction()

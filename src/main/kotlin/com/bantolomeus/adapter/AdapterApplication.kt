@@ -64,4 +64,6 @@ fun main(args: Array<String>) {
 
     val context = Context()
     context.handleAction()
+    context.handleAction()
+    context.handleAction()
 }
