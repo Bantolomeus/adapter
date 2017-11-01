@@ -1,15 +1,19 @@
 package com.bantolomeus.adapter.proxy
 
 class DesignDBProxyCache : DesignDBInterface {
-    val slowDesignDB = SlowDesignDB()
-    var designs = mutableListOf<String>()
+    private val slowDesignDB = SlowDesignDB()
+    private var designs = mutableListOf<String>()
+
+    init {
+        updateDesignCache()
+    }
 
     override fun getAllDesigns(): MutableList<String> {
         return designs
     }
 
     // scheduled task that triggers all 30 minutes
-    fun updateDesignCache() {
+    private fun updateDesignCache() {
         designs = slowDesignDB.getAllDesigns()
     }
 }

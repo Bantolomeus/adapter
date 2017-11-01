@@ -5,6 +5,7 @@ import com.bantolomeus.adapter.iteratorAndComposit.composit.TiniestPicture
 import com.bantolomeus.adapter.iteratorAndComposit.iterator.Picture
 import com.bantolomeus.adapter.iteratorAndComposit.iterator.PictureService
 import com.bantolomeus.adapter.iteratorAndComposit.iterator.TinyPicture
+import com.bantolomeus.adapter.proxy.Client
 import com.bantolomeus.adapter.state.Context
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -61,9 +62,13 @@ fun main(args: Array<String>) {
 
     picture.print()
 
-
+    // state
     val context = Context()
     context.handleAction()
     context.handleAction()
     context.handleAction()
+
+    // proxy
+    val client = Client()
+    println("\n${client.getAllDesigns()}")
 }
